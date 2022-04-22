@@ -10,15 +10,16 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:sampleextension.helloWorld"
+        "onCommand:sampleextension.helloWorld",
+		"onView:emotionDevice"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"views": {
 			"explorer": [
 				{
-					"id": "uniDevice",
-					"name": "UNI Device"
+					"id": "emotionDevice",
+					"name": "EMotion Device"
 				}
 			]
 		}

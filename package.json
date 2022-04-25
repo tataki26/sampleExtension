@@ -10,8 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:sampleextension.helloWorld",
-		"onView:emotionDevice"
+		"onView:emotionDevice",
+		"onCommand:uniDevice.start"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -22,7 +22,14 @@
 					"name": "EMotion Device"
 				}
 			]
-		}
+		},
+		"commands": [
+			{
+			  "command": "uniDevice.start",
+			  "title": "UNI Device Program",
+			  "category": "UNI Device"
+			}
+		  ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

@@ -28,8 +28,30 @@
 			  "command": "uniDevice.start",
 			  "title": "UNI Device Program",
 			  "category": "UNI Device"
+			},
+			{
+				"command": "uniDevice.connection",
+				"title": "uniDevice: Connection"
+			},
+			{
+				"command": "uniDevice.motion",
+				"title": "uniDevice: Motion"
 			}
-		  ]
+		  ],
+		  "menus": {
+			  "explorer/context": [
+				  {
+					  "when": "resourceLangId == cpp",
+					  "command": "uniDevice.connection",
+					  "group": "uniGroup@1"
+				  },
+				  {
+					"when": "resourceLangId == cpp",
+					"command": "uniDevice.motion",
+					"group": "uniGroup@2"
+				  }
+			  ]
+		  }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	vscode.window.registerTreeDataProvider('emotionDevice', new TreeDataProvider());
+	vscode.window.registerTreeDataProvider('emotionDeviceView', new TreeDataProvider());
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('uniDevice.start', () => {

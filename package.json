@@ -10,16 +10,25 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onView:emotionDevice",
+		"onView:emotionDeviceView",
 		"onCommand:uniDevice.start"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"views": {
-			"explorer": [
+		"viewsContainers": {
+			"activitybar": [
 				{
 					"id": "emotionDevice",
-					"name": "EMotion Device"
+					"title": "EMotion Device",
+					"icon": "img/e.svg"
+				}
+			]
+		},
+		"views": {
+			"emotionDevice": [
+				{
+					"id": "emotionDeviceView",
+					"name": "EMotion Device View"
 				}
 			]
 		},

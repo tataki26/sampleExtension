@@ -45,6 +45,14 @@
 			{
 				"command": "uniDevice.motion",
 				"title": "uniDevice: Motion"
+			},
+			{
+				"command": "uniDevice.edit",
+				"title": "Edit",
+				"icon": {
+					"light": "img/icon.svg",
+					"dark": "img/icon.svg"
+				}
 			}
 		  ],
 		  "menus": {
@@ -58,6 +66,13 @@
 					"when": "resourceLangId == cpp",
 					"command": "uniDevice.motion",
 					"group": "uniGroup@2"
+				  }
+			  ],
+			  "view/item/context": [
+				  {
+					  "command": "uniDevice.edit",
+					  "when": "view == emotionDeviceView",
+					  "group": "inline"
 				  }
 			  ]
 		  }

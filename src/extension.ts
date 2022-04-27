@@ -18,6 +18,20 @@ export function activate(context: vscode.ExtensionContext) {
 		})
 	  );
 
+	  // vscode.commands.registerCommand('uniDevice.edit', ()=> vscode.window.showInformationMessage("successfully called edit entry"));
+	  vscode.commands.registerCommand('uniDevice.edit', ()=> {
+		// Create and show panel
+		const panel = vscode.window.createWebviewPanel(
+		  'uniDevice',
+		  'UNI Device',
+		  vscode.ViewColumn.One,
+		  {}
+		);
+  
+		// And set its HTML content
+		panel.webview.html = getWebviewContent();
+	  });
+
 }
 
 function getWebviewContent() {

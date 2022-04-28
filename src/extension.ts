@@ -13,23 +13,26 @@ export function activate(context: vscode.ExtensionContext) {
 		);
   
 		// And set its HTML content
-		panel.webview.html = getWebviewContent();
+		panel.webview.html = getWebviewContent(1);
 	  });
 
 }
 
-function getWebviewContent() {
+function getWebviewContent(num: number) {
 	return `<!DOCTYPE html>
-  <html lang="en">
+  <html lang="ko">
   <head>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <title>UNI Device</title>
   </head>
   <body>
+  <p>Communication Type</p>
 	  <input type="radio" name="chk_info" value="USB">USB
 	  <input type="radio" name="chk_info" value="UDP" checked="checked">UDP
 	  <input type="radio" name="chk_info" value="UDP Full Address">UDP Full Address
+	  <p>Network</p>
+	  <input type="text" value="192.168.240.${num}" readonly>
   </body>
   </html>`;
   }

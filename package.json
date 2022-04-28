@@ -10,8 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onView:emotionDeviceView",
-		"onCommand:uniDevice.start"
+		"onView:uniDevice",
+		"onView:snetDevice"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -27,51 +27,43 @@
 		"views": {
 			"emotionDevice": [
 				{
-					"id": "emotionDeviceView",
-					"name": "EMotion Device View"
+					"id": "uniDevice",
+					"name": "UNI Device"
+				},
+				{
+					"id": "snetDevice",
+					"name": "SNET Device"
 				}
 			]
 		},
 		"commands": [
 			{
-			  "command": "uniDevice.start",
-			  "title": "UNI Device Program",
-			  "category": "UNI Device"
-			},
-			{
-				"command": "uniDevice.connection",
-				"title": "uniDevice: Connection"
-			},
-			{
-				"command": "uniDevice.motion",
-				"title": "uniDevice: Motion"
-			},
-			{
-				"command": "uniDevice.edit",
-				"title": "Edit",
+				"command": "uniDevice1.connection",
+				"title": "Connection",
 				"icon": {
-					"light": "img/icon.svg",
-					"dark": "img/icon.svg"
+					"light": "img/connect.svg",
+					"dark": "img/connect.svg"
+				}
+			},
+			{
+				"command": "uniDevice1.motion",
+				"title": "Motion",
+				"icon": {
+					"light": "img/move.svg",
+					"dark": "img/move.svg"
 				}
 			}
 		  ],
 		  "menus": {
-			  "explorer/context": [
-				  {
-					  "when": "resourceLangId == cpp",
-					  "command": "uniDevice.connection",
-					  "group": "uniGroup@1"
-				  },
-				  {
-					"when": "resourceLangId == cpp",
-					"command": "uniDevice.motion",
-					"group": "uniGroup@2"
-				  }
-			  ],
 			  "view/item/context": [
 				  {
-					  "command": "uniDevice.edit",
-					  "when": "view == emotionDeviceView",
+					  "command": "uniDevice1.connection",
+					  "when": "view == uniDevice",
+					  "group": "inline"
+				  },
+				  {
+					  "command": "uniDevice1.motion",
+					  "when": "view == uniDevice",
 					  "group": "inline"
 				  }
 			  ]

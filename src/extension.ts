@@ -1,25 +1,9 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	vscode.window.registerTreeDataProvider('emotionDeviceView', new TreeDataProvider());
-
-	context.subscriptions.push(
-		vscode.commands.registerCommand('uniDevice.start', () => {
-		  // Create and show panel
-		  const panel = vscode.window.createWebviewPanel(
-			'uniDevice',
-			'UNI Device',
-			vscode.ViewColumn.One,
-			{}
-		  );
+	vscode.window.registerTreeDataProvider('uniDevice', new TreeDataProvider());
 	
-		  // And set its HTML content
-		  panel.webview.html = getWebviewContent();
-		})
-	  );
-
-	  // vscode.commands.registerCommand('uniDevice.edit', ()=> vscode.window.showInformationMessage("successfully called edit entry"));
-	  vscode.commands.registerCommand('uniDevice.edit', ()=> {
+	  vscode.commands.registerCommand('uniDevice1.connection', ()=> {
 		// Create and show panel
 		const panel = vscode.window.createWebviewPanel(
 		  'uniDevice',
@@ -56,10 +40,7 @@ class TreeDataProvider implements vscode.TreeDataProvider<TreeItem> {
 	data: TreeItem[];
   
 	constructor() {
-	  this.data = [new TreeItem('UNI', [
-		new TreeItem('Connection'),
-		new TreeItem('Motion')
-	  ])];
+	  this.data = [new TreeItem('UNI 1'), new TreeItem('UNI 2'), new TreeItem('UNI 3'), new TreeItem('UNI 4')];
 	}
   
 	getTreeItem(element: TreeItem): vscode.TreeItem|Thenable<vscode.TreeItem> {

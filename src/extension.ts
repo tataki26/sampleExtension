@@ -33,6 +33,7 @@ function getWebviewContent(num: number) {
 	  <input type="radio" name="chk_info" value="UDP Full Address">UDP Full Address
 	  <p>Network</p>
 	  <input type="text" value="192.168.240.${num}" readonly>
+	  <button type="button" onclick="alert('Hello World!')">Connect</button>
   </body>
   </html>`;
   }

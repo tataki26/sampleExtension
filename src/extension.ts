@@ -69,136 +69,148 @@ function getConnectContent(num: number) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>UNI Device</title>
 		<link href="${myCSS}" rel="stylesheet" />
-		<script src="${myJS}"></script>
 	</head>
 	<body>
-	<div class="container">
-	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">MotionStatus</li>
-		<li class="tab-link" data-tab="tab-2">Drive Status</li>
-		<li class="tab-link" data-tab="tab-3">Motion Fault</li>
-	</ul>
-	
-	<div id="tab-1" class="tab-content current">
-	<table
-	border="1"
-	width="100%"
-	height="100"
-	cellspacing="5">
-	<caption></caption>
-	<thead>
-		<tr align="center" bgcolor="black">
-			<th>Axis No.</th>
-			<th>Command Position</th>
-			<th>Actual Position</th>
-			<th>Delta Position</th>
-			<th>Command Velocity</th>
-			<th>Actual Velocity</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr align="center" bgcolor="black">
+	<div class="tabs">
+		<input id="all" type="radio" name="tab_item" checked>
+		<label class="tab_item" for="all">Motion Status</label>
+		<input id="programming" type="radio" name="tab_item">
+		<label class="tab_item" for="programming">Drive Status</label>
+		<input id="design" type="radio" name="tab_item">
+		<label class="tab_item" for="design">Motion Fault</label>
+		<div class="tab_content" id="all_content">
+		<table
+		border="1"
+		width="100%"
+		height="100"
+		cellspacing="5">
+		<caption></caption>
+		<thead>
+			<tr align="center" bgcolor="black">
+				<th>Axis No.</th>
+				<th>Command Position</th>
+				<th>Actual Position</th>
+				<th>Delta Position</th>
+				<th>Command Velocity</th>
+				<th>Actual Velocity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center" bgcolor="black">
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr align="center" bgcolor="black">
+			<td>1</td>
 			<td>0</td>
 			<td>0</td>
 			<td>0</td>
 			<td>0</td>
 			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tr align="center" bgcolor="black">
-		<td>1</td>
-		<td>0</td>
-		<td>0</td>
-		<td>0</td>
-		<td>0</td>
-		<td>0</td>
-		</tr>
-	</tbody>
-	</table>
+			</tr>
+		</tbody>
+		</table>
+		</div>
+		<div class="tab_content" id="programming_content">
+			https://velog.io/@henotony
+		</div>
+			<div class="tab_content" id="design_content">
+				Thanks a lot
+		</div>
+	</div>
 	<br>
 	<table
-	border="1"
-	width="100%"
-	height="100"
-	cellspacing="5">
-	<caption></caption>
-	<thead>
-		<tr align="center" bgcolor="black">
-			<th>Axis No.</th>
-			<th>Drive Ready</th>
-			<th>Drive ON</th>
-			<th>Drive Run</th>
-			<th>Moving</th>
-			<th>In-Position</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr align="center" bgcolor="black">
-			<td>0</td>
-			<td><input type="radio" name="chk_info" value="On"></td>
-			<td><input type="radio" name="chk_info" value="On"></td>
-			<td><input type="radio" name="chk_info" value="On"></td>
-			<td><input type="radio" name="chk_info" value="On"></td>
-			<td><input type="radio" name="chk_info" value="On"></td>
-		</tr>
-		<tr align="center" bgcolor="black">
-		<td>1</td>
-		<td><input type="radio" name="chk_info" value="Off"></td>
-		<td><input type="radio" name="chk_info" value="Off"></td>
-		<td><input type="radio" name="chk_info" value="Off"></td>
-		<td><input type="radio" name="chk_info" value="Off"></td>
-		<td><input type="radio" name="chk_info" value="Off"></td>
-		</tr>
-	</tbody>
-	</table>
-	<table
-	border="1"
-	width="100%"
-	height="100"
-	cellspacing="5">
-	<caption>Move</caption>
-	<thead>
-		<tr align="center" bgcolor="black">
-			<th>Axis No.</th>
-			<th>Velocity</th>
-			<th>Acceleration</th>
-			<th>Deceleration</th>
-			<th>Jerk Acceleration</th>
-			<th>Jerk Deceleration</th>
-			<th>Run</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr align="center" bgcolor="black">
-			<td>0</td>
-			<td>90</td>
-			<td>600</td>
-			<td>600</td>
+		border="1"
+		width="100%"
+		height="100"
+		cellspacing="5">
+		<caption></caption>
+		<thead>
+			<tr align="center" bgcolor="black">
+				<th>Axis No.</th>
+				<th>Drive Ready</th>
+				<th>Drive ON</th>
+				<th>Drive Run</th>
+				<th>Moving</th>
+				<th>In-Position</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center" bgcolor="black">
+				<td>0</td>
+				<td><input type="radio" name="chk_info" value="On"></td>
+				<td><input type="radio" name="chk_info" value="On"></td>
+				<td><input type="radio" name="chk_info" value="On"></td>
+				<td><input type="radio" name="chk_info" value="On"></td>
+				<td><input type="radio" name="chk_info" value="On"></td>
+			</tr>
+			<tr align="center" bgcolor="black">
+			<td>1</td>
+			<td><input type="radio" name="chk_info" value="Off"></td>
+			<td><input type="radio" name="chk_info" value="Off"></td>
+			<td><input type="radio" name="chk_info" value="Off"></td>
+			<td><input type="radio" name="chk_info" value="Off"></td>
+			<td><input type="radio" name="chk_info" value="Off"></td>
+			</tr>
+		</tbody>
+		</table>
+		<br>
+	<div class="tabs2">
+		<input id="all2" type="radio" name="tab_item2" checked>
+		<label class="tab_item2" for="all2">Move</label>
+		<input id="programming2" type="radio" name="tab_item2">
+		<label class="tab_item2" for="programming2">Jog</label>
+		<input id="design2" type="radio" name="tab_item2">
+		<label class="tab_item2" for="design2">Interpolation</label>
+		<div class="tab_content2" id="all_content2">
+		<table
+		border="1"
+		width="100%"
+		height="100"
+		cellspacing="5">
+		<thead>
+			<tr align="center" bgcolor="black">
+				<th>Axis No.</th>
+				<th>Velocity</th>
+				<th>Acceleration</th>
+				<th>Deceleration</th>
+				<th>Jerk Acceleration</th>
+				<th>Jerk Deceleration</th>
+				<th>Run</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center" bgcolor="black">
+				<td>0</td>
+				<td>90</td>
+				<td>600</td>
+				<td>600</td>
+				<td>66</td>
+				<td>66</td>
+				<td><button type="button" onclick="alert('Hello World!')">Run</button></td>
+			</tr>
+			<tr align="center" bgcolor="black">
+			<td>1</td>
+			<td>360</td>
+			<td>100</td>
+			<td>100</td>
 			<td>66</td>
 			<td>66</td>
 			<td><button type="button" onclick="alert('Hello World!')">Run</button></td>
-		</tr>
-		<tr align="center" bgcolor="black">
-		<td>1</td>
-		<td>360</td>
-		<td>100</td>
-		<td>100</td>
-		<td>66</td>
-		<td>66</td>
-		<td><button type="button" onclick="alert('Hello World!')">Run</button></td>
-		</tr>
-	</tbody>
-	</table>
-	</div>
-	
-	<div id="tab-2" class="tab-content">
-	두번째 메뉴의 내용이 들어갑니다
-	</div>
-	
-	<div id="tab-3" class="tab-content">
-	세번째 메뉴의 내용이 들어갑니다
-	</div>
-	
+			</tr>
+		</tbody>
+		</table>
+		</div>
+		<div class="tab_content2" id="programming_content2">
+			https://velog.io/@henotony
+		</div>
+			<div class="tab_content2" id="design_content2">
+				Thanks a lot
+		</div>
 	</div>
 	</body>
 	</html>`;

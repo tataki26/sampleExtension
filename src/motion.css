@@ -1,27 +1,105 @@
-ul.tabs{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+/* 탭 전체 스타일 */
+.tabs {
+    margin-top: 50px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;}
+  
+  /* 탭 스타일 */
+  .tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #333333;
+    background-color: #f8f8f8;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
   }
-  ul.tabs li{
-    background: none;
-    color: #eee;
-    display: inline-block;
-    padding: 10px 15px;
-    cursor: pointer;
+  .tab_item:hover {
+    opacity: 0.75;
   }
   
-  ul.tabs li.current{
-    background: #ededed;
-    color: #222;
+  /* 라디오 버튼 UI삭제*/
+  input[name="tab_item"] {
+    display: none;
   }
   
-  .tab-content{
-    display: none;  
-    padding: 15px 0;
-    border-top:3px solid #eee;
+  /* 탭 컨텐츠 스타일 */
+  .tab_content {
+    display: none;
+    clear: both;
+    overflow: hidden;
   }
   
-  .tab-content.current{
-    display: inherit;
+  
+  /* 선택 된 탭 콘텐츠를 표시 */
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content {
+    display: block;
+  }
+  
+  /* 선택된 탭 스타일 */
+  .tabs input:checked + .tab_item {
+    background-color: #333333;
+    color: #fff;
+  }
+
+  /* 탭 전체 스타일 */
+.tabs2 {
+    margin-top: 50px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;}
+  
+  /* 탭 스타일 */
+  .tab_item2 {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #333333;
+    background-color: #f8f8f8;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item2:hover {
+    opacity: 0.75;
+  }
+  
+  /* 라디오 버튼 UI삭제*/
+  input[name="tab_item2"] {
+    display: none;
+  }
+  
+  /* 탭 컨텐츠 스타일 */
+  .tab_content2 {
+    display: none;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /* 선택 된 탭 콘텐츠를 표시 */
+  #all2:checked ~ #all_content2,
+  #programming2:checked ~ #programming_content2,
+  #design2:checked ~ #design_content2 {
+    display: block;
+  }
+  
+  /* 선택된 탭 스타일 */
+  .tabs2 input:checked + .tab_item2 {
+    background-color: #333333;
+    color: #fff;
   }

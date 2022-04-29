@@ -116,10 +116,78 @@ function getConnectContent(num: number) {
 		</table>
 		</div>
 		<div class="tab_content" id="programming_content">
-			https://velog.io/@henotony
+		<table
+		border="1"
+		width="100%"
+		height="100"
+		cellspacing="5">
+		<caption></caption>
+		<thead>
+			<tr align="center" bgcolor="black">
+				<th>Axis No.</th>
+				<th>Command Pulse</th>
+				<th>Actual Pulse</th>
+				<th>Command Rpm</th>
+				<th>Actual Rpm</th>
+				<th>DC Link Voltage</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center" bgcolor="black">
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr align="center" bgcolor="black">
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			</tr>
+		</tbody>
+		</table>
 		</div>
 			<div class="tab_content" id="design_content">
-				Thanks a lot
+			<table
+			border="1"
+			width="100%"
+			height="100"
+			cellspacing="5">
+			<caption></caption>
+			<thead>
+				<tr align="center" bgcolor="black">
+					<th>Axis No.</th>
+					<th>+Limit</th>
+					<th>-Limit</th>
+					<th>Software +Limit</th>
+					<th>Software -Limit</th>
+					<th>Following Error</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr align="center" bgcolor="black">
+					<td>0</td>
+					<td><input type="radio" name="chk_info" value="On"></td>
+					<td><input type="radio" name="chk_info" value="On"></td>
+					<td><input type="radio" name="chk_info" value="On"></td>
+					<td><input type="radio" name="chk_info" value="On"></td>
+					<td><input type="radio" name="chk_info" value="On"></td>
+				</tr>
+				<tr align="center" bgcolor="black">
+				<td>1</td>
+				<td><input type="radio" name="chk_info" value="Off"></td>
+				<td><input type="radio" name="chk_info" value="Off"></td>
+				<td><input type="radio" name="chk_info" value="Off"></td>
+				<td><input type="radio" name="chk_info" value="Off"></td>
+				<td><input type="radio" name="chk_info" value="Off"></td>
+				</tr>
+			</tbody>
+			</table>
 		</div>
 	</div>
 	<br>
@@ -206,10 +274,86 @@ function getConnectContent(num: number) {
 		</table>
 		</div>
 		<div class="tab_content2" id="programming_content2">
-			https://velog.io/@henotony
+		<table
+		border="1"
+		width="100%"
+		height="100"
+		cellspacing="5">
+		<caption></caption>
+		<thead>
+			<tr align="center" bgcolor="black">
+				<th>Axis No.</th>
+				<th>Velocity</th>
+				<th>Acceleration</th>
+				<th>Deceleration</th>
+				<th>Jerk Acceleration</th>
+				<th>Jerk Deceleration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center" bgcolor="black">
+				<td>0</td>
+				<td>360</td>
+				<td>100</td>
+				<td>10</td>
+				<td>66</td>
+				<td>66</td>
+			</tr>
+			<tr align="center" bgcolor="black">
+				<td>1</td>
+				<td>360</td>
+				<td>100</td>
+				<td>100</td>
+				<td>66</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
 		</div>
 			<div class="tab_content2" id="design_content2">
-				Thanks a lot
+			<table
+			border="1"
+			width="100%"
+			height="100"
+			cellspacing="5">
+			<caption></caption>
+			<thead>
+				<tr align="center" bgcolor="black">
+					<th>Moving Method</th>
+					<th>Velocity</th>
+					<th>Acceleration</th>
+					<th>Deceleration</th>
+					<th>Jerk Acceleration</th>
+					<th>Jerk Deceleration</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr align="center" bgcolor="black">
+					<td>Line</td>
+					<td>360</td>
+					<td>1000</td>
+					<td>100</td>
+					<td>66</td>
+					<td>66</td>
+				</tr>
+				<tr align="center" bgcolor="black">
+					<td>Arc&Radius</td>
+					<td>360</td>
+					<td>1000</td>
+					<td>100</td>
+					<td>66</td>
+					<td>66</td>
+				</tr>
+				<tr align="center" bgcolor="black">
+					<td>Arc&Angle</td>
+					<td>360</td>
+					<td>1000</td>
+					<td>100</td>
+					<td>66</td>
+					<td>66</td>
+				</tr>
+			</tbody>
+			</table>
 		</div>
 	</div>
 	</body>
